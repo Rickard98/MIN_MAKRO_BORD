@@ -1,0 +1,48 @@
+pacman::p_load("stringr", "pbapply","knitr" ,"openxlsx", "dplyr", "tidyr", "purrr")
+
+
+###Quarterly 
+# Directory containing the Excel files
+directory <- "data/quarterly/"
+
+# Get a list of all Excel files in the directory
+R_files <- list.files(path = directory, pattern = "\\.R$", full.names = TRUE)
+
+# Create an empty list to store the data frames
+data_list <- list()
+
+# Loop through each Excel file, read it, and store it in the list
+for (file in R_files) {
+  data <- readRDS(file)
+  data_list[[basename(file)]] <- data
+}
+
+
+Quarterly_data <- reduce(data_list, left_join, by = c("geo", "time"))
+
+write.xlsx(Quarterly_data, "data/Quarterly_data_all.xlsx")
+
+###Monthly 
+# Directory containing the Excel files
+directory <- "data/Monthly/"
+
+# Get a list of all Excel files in the directory
+R_files <- list.files(path = directory, pattern = "\\.R$", full.names = TRUE)
+
+# Create an empty list to store the data frames
+data_list <- list()
+
+# Loop through each Excel file, read it, and store it in the list
+for (file in R_files) {
+  data <- readRDS(file)
+  data_list[[basename(file)]] <- data
+}
+
+
+Monthly_data <- reduce(data_list, left_join, by = c("geo", "time"))
+
+write.xlsx(Monthly_data, "data/Monthly_data_all.xlsx")
+
+
+
+
