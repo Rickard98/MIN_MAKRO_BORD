@@ -20,7 +20,7 @@ for (file in R_files) {
 
 Quarterly_data <- reduce(data_list, left_join, by = c("geo", "time"))
 
-write.xlsx(Quarterly_data, "data/Quarterly_data_all.xlsx")
+saveRDS(Quarterly_data, "data/Quarterly_data_all.R")
 
 ###Monthly 
 # Directory containing the Excel files
@@ -41,8 +41,10 @@ for (file in R_files) {
 
 Monthly_data <- reduce(data_list, left_join, by = c("geo", "time"))
 
-write.xlsx(Monthly_data, "data/Monthly_data_all.xlsx")
+Monthly_data <- select(Monthly_data, -coicop.x, -coicop.y)
+
+saveRDS(Monthly_data, "data/Monthly_data_all.R")
 
 
-
+names(Monthly_data)
 
