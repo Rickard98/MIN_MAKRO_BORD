@@ -1,0 +1,13 @@
+name: MakroDashboard
+title: MakroDashboard
+username: rickardsjoberg
+account: rickardsjoberg
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 12433237
+bundleId: 8967767
+url: https://rickardsjoberg.shinyapps.io/MakroDashboard/
+version: 1
+asMultiple: FALSE
+asStatic: FALSE
+ignoredFiles: script/Combine all data in to one df.R|script/Get Eurostat data.R|script/old/Dashboard.R

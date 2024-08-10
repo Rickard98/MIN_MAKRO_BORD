@@ -20,6 +20,16 @@ for (file in R_files) {
 
 Quarterly_data <- reduce(data_list, left_join, by = c("geo", "time"))
 
+Quarterly_data <- Quarterly_data %>%
+  rename(`Total aggregated Final consumption` = Final_consumption) %>%
+  rename(`Change in GDP` = GDP_change) %>%
+  rename(`Gross fixed capital formation` = GFCF) %>%
+  rename(`Government debt to gdp` = government_debt) %>%
+  rename(`Government expenditure` = Government_expenditure) %>%
+  rename(`Change in Housing prices` = House_price) %>%
+  rename(`Government deficit` = government_deficit)
+  
+
 saveRDS(Quarterly_data, "MakroDashboard/data/Quarterly_data_all.R")
 
 ###Monthly 
@@ -43,8 +53,16 @@ Monthly_data <- reduce(data_list, left_join, by = c("geo", "time"))
 
 Monthly_data <- select(Monthly_data, -coicop.x, -coicop.y)
 
+
+Monthly_data <- Monthly_data %>%
+  rename(`Change in energy price` = Energy_price) %>%
+  rename(`Change in food price` = food_price) %>%
+  rename(`Unemployment data` = unemployment_data)
+
+
+
+
 saveRDS(Monthly_data, "MakroDashboard/data/Monthly_data_all.R")
 
 
-names(Monthly_data)
 
