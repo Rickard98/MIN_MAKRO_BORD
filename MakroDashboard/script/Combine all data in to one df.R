@@ -3,7 +3,7 @@ pacman::p_load("stringr", "pbapply","knitr" ,"openxlsx", "dplyr", "tidyr", "purr
 
 ###Quarterly 
 # Directory containing the Excel files
-directory <- "data/quarterly/"
+directory <- "MakroDashboard/data/quarterly/"
 
 # Get a list of all Excel files in the directory
 R_files <- list.files(path = directory, pattern = "\\.R$", full.names = TRUE)
@@ -20,11 +20,11 @@ for (file in R_files) {
 
 Quarterly_data <- reduce(data_list, left_join, by = c("geo", "time"))
 
-saveRDS(Quarterly_data, "data/Quarterly_data_all.R")
+saveRDS(Quarterly_data, "MakroDashboard/data/Quarterly_data_all.R")
 
 ###Monthly 
 # Directory containing the Excel files
-directory <- "data/Monthly/"
+directory <- "MakroDashboard/data/Monthly/"
 
 # Get a list of all Excel files in the directory
 R_files <- list.files(path = directory, pattern = "\\.R$", full.names = TRUE)
@@ -43,7 +43,7 @@ Monthly_data <- reduce(data_list, left_join, by = c("geo", "time"))
 
 Monthly_data <- select(Monthly_data, -coicop.x, -coicop.y)
 
-saveRDS(Monthly_data, "data/Monthly_data_all.R")
+saveRDS(Monthly_data, "MakroDashboard/data/Monthly_data_all.R")
 
 
 names(Monthly_data)

@@ -1,6 +1,13 @@
 # Load required libraries
 library(shiny)
 library(ggplot2)
+library(stringr)
+library(knitr)
+library(dplyr)
+library(tidyr)
+library(purrr)
+
+
 
 # Load your data
 Monthly_data <- readRDS("data/Monthly_data_all.R")  # Replace "your_data.csv" with your file path
