@@ -8,7 +8,7 @@ library(tidyr)
 library(purrr)
 library(rsconnect)
 library(shinydashboard)  # Load shinydashboard
-
+library(zoo)
 
 # Load your data
 Monthly_data <- readRDS("data/Monthly_data_all.R")  # Replace "your_data.csv" with your file path
@@ -37,7 +37,7 @@ ui <- dashboardPage(
                conditionalPanel(
                  condition = "input.dataset == 'Monthly'",
                  selectInput("country_monthly", "Select Country:", choices = unique(Monthly_data$geo)),
-                 selectInput("variable_monthly", "Select Variable:", choices = c("CPI", "Change in energy price",
+                 selectInput("variable_monthly", "Select Variable:", choices = c("Infaltion CPI", "Change in energy price",
                                                                                  "Change in food price", "Unemployment data"))
                ),
                conditionalPanel(
@@ -78,6 +78,16 @@ ui <- dashboardPage(
                   plotOutput("time_series_plot"),
                   class = "box-custom"  # Apply custom class for the CSS
                 )
+              ),
+              fluidRow(
+                box(title = "Note about the data", width = 12, background = "light-blue", 
+                HTML("The figures above are compiled from various data sources provided by Eurostat (https://ec.europa.eu/eurostat).<br>
+                HCPI (inflation): Harmonized Consumer Price Index (all items and annual rate of change). Change in energy and food prices are also HCPI. <br>
+                Unemployment data: Percentage of population in the labour force (seasonally adjusted data). <br>
+                Gross domestic product (GDP): GDP at market prices (seasonally adjusted and chain linked volumes, annualized percentage change on previous period). <br>
+                Change in Housing prices: House price index (2015 = 100), total types of houses, and annual rate of change. <br>
+                Total aggregated Final consumption: GDP main components(output, expenditure, income), Final consumption expenditure, current prices, million euro")
+                )
               )
       )
     )
@@ -104,6 +114,12 @@ server <- function(input, output) {
     } else {
       # Filter Quarterly data based on selected country
       data <- Quarterly_data[Quarterly_data$geo == input$country_quarterly, ]
+
+      # Apply seasonal adjustment if the selected variable requires it
+      if (input$variable_quarterly %in% c("Total aggregated Final consumption", "Gross fixed capital formation", "Government expenditure")) {
+        window_size <- 4  # Adjust based on your data's seasonality (e.g., 4 for quarterly data)
+        data[[input$variable_quarterly]] <- rollmean(data[[input$variable_quarterly]], k = window_size, fill = NA, align = "center")
+      }
       
       # Create the plot
       ggplot(data, aes(x = time, y = get(input$variable_quarterly))) + 

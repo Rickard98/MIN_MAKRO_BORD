@@ -1,4 +1,4 @@
-pacman::p_load("stringr", "pbapply","knitr" ,"openxlsx", "dplyr", "tidyr", "purrr")
+pacman::p_load("stringr", "pbapply","knitr" ,"openxlsx", "dplyr", "tidyr", "purrr", "zoo")
 
 
 ###Quarterly 
@@ -28,6 +28,19 @@ Quarterly_data <- Quarterly_data %>%
   rename(`Government expenditure` = Government_expenditure) %>%
   rename(`Change in Housing prices` = House_price) %>%
   rename(`Government deficit` = government_deficit)
+
+Quarterly_data <- Quarterly_data %>% 
+  mutate(geo = case_when(
+    geo == "DE" ~ "Germany",
+    geo == "DK" ~ "Denmark",
+    geo == "ES" ~ "Spain",
+    geo == "FI" ~ "Finland",
+    geo == "FR" ~ "France",
+    geo == "IT" ~ "Italy",
+    geo == "NL" ~ "Netherlands",
+    geo == "SE" ~ "Sweden",
+    TRUE ~ geo # This keeps other values unchanged
+  ))
   
 
 saveRDS(Quarterly_data, "MakroDashboard/data/Quarterly_data_all.R")
@@ -57,12 +70,30 @@ Monthly_data <- select(Monthly_data, -coicop.x, -coicop.y)
 Monthly_data <- Monthly_data %>%
   rename(`Change in energy price` = Energy_price) %>%
   rename(`Change in food price` = food_price) %>%
+  rename(`Infaltion CPI` = CPI) %>%
   rename(`Unemployment data` = unemployment_data)
 
-
-
+Monthly_data <- Monthly_data %>% 
+  mutate(geo = case_when(
+    geo == "DE" ~ "Germany",
+    geo == "DK" ~ "Denmark",
+    geo == "ES" ~ "Spain",
+    geo == "FI" ~ "Finland",
+    geo == "FR" ~ "France",
+    geo == "IT" ~ "Italy",
+    geo == "NL" ~ "Netherlands",
+    geo == "SE" ~ "Sweden",
+    TRUE ~ geo # This keeps other values unchanged
+  ))
 
 saveRDS(Monthly_data, "MakroDashboard/data/Monthly_data_all.R")
+
+###########################################################################
+
+
+
+
+
 
 
 
