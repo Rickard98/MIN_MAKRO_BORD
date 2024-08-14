@@ -44,8 +44,9 @@ ui <- dashboardPage(
                  condition = "input.dataset == 'Quarterly'",
                  selectInput("country_quarterly", "Select Country:", choices = unique(Quarterly_data$geo)),
                  selectInput("variable_quarterly", "Select Variable:", choices = c("Total aggregated Final consumption", "Change in GDP", "Gross fixed capital formation",
-                                                                                   "Government debt to gdp", "Government deficit",
-                                                                                   "Government expenditure", "Change in Housing prices"))
+                                                                                   "Government debt to gdp", "Government deficit", "Current account", "Direct investment", "Employees Compensation",
+                                                                                   "Government expenditure", "Change in Housing prices", "Totlat employment", "Net international investment",
+                                                                                   "Nominal unit labour cost", "Labour productivity"))
                )
       )
     )
@@ -86,7 +87,7 @@ ui <- dashboardPage(
                 Unemployment data: Percentage of population in the labour force (seasonally adjusted data). <br>
                 Gross domestic product (GDP): GDP at market prices (seasonally adjusted and chain linked volumes, annualized percentage change on previous period). <br>
                 Change in Housing prices: House price index (2015 = 100), total types of houses, and annual rate of change. <br>
-                Total aggregated Final consumption: GDP main components(output, expenditure, income), Final consumption expenditure, current prices, million euro")
+                Final consumption expenditure households: Final consumption expenditure of households and non-profit institutions serving households, Current prices, million units of national currency")
                 )
               )
       )

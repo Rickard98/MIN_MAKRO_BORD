@@ -21,13 +21,23 @@ for (file in R_files) {
 Quarterly_data <- reduce(data_list, left_join, by = c("geo", "time"))
 
 Quarterly_data <- Quarterly_data %>%
-  rename(`Total aggregated Final consumption` = Final_consumption) %>%
+  rename(`Final consumption expenditure households` = Final_consumption) %>%
   rename(`Change in GDP` = GDP_change) %>%
   rename(`Gross fixed capital formation` = GFCF) %>%
   rename(`Government debt to gdp` = government_debt) %>%
   rename(`Government expenditure` = Government_expenditure) %>%
   rename(`Change in Housing prices` = House_price) %>%
-  rename(`Government deficit` = government_deficit)
+  rename(`Government deficit` = government_deficit) %>%
+  rename(`Current account` = Current_account) %>%
+  rename(`Direct investment` = Direct_investment) %>%
+  rename(`Employees Compensation` = Employees_Compensation) %>%
+  rename(`Net international investment` = Net_international_investment) %>%
+  rename(`Nominal unit labour cost` = Nominal_unit_labour_cost) %>%
+  rename(`Labour productivity` = labour_productivity) %>%
+  rename(`Totlat employment` = Employment)
+  
+
+
 
 Quarterly_data <- Quarterly_data %>% 
   mutate(geo = case_when(
