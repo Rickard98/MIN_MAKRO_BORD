@@ -43,10 +43,11 @@ ui <- dashboardPage(
                conditionalPanel(
                  condition = "input.dataset == 'Quarterly'",
                  selectInput("country_quarterly", "Select Country:", choices = unique(Quarterly_data$geo)),
-                 selectInput("variable_quarterly", "Select Variable:", choices = c("Total aggregated Final consumption", "Change in GDP", "Gross fixed capital formation",
-                                                                                   "Government debt to gdp", "Government deficit", "Current account", "Direct investment", "Employees Compensation",
-                                                                                   "Government expenditure", "Change in Housing prices", "Totlat employment", "Net international investment",
-                                                                                   "Nominal unit labour cost", "Labour productivity"))
+                 selectInput("variable_quarterly", "Select Variable:", choices = c("Change in GDP", "Gross fixed capital formation", "Final consumption expenditure households",
+                                                                                   "Government debt to gdp", "Government deficit", "Government expenditure", "Current account",
+                                                                                   "Direct investment", "Net international investment", "Change in Housing prices",
+                                                                                   "Totlat employment", "Employees Compensation","Nominal unit labour cost", "Labour productivity"))
+                 
                )
       )
     )
@@ -87,7 +88,10 @@ ui <- dashboardPage(
                 Unemployment data: Percentage of population in the labour force (seasonally adjusted data). <br>
                 Gross domestic product (GDP): GDP at market prices (seasonally adjusted and chain linked volumes, annualized percentage change on previous period). <br>
                 Change in Housing prices: House price index (2015 = 100), total types of houses, and annual rate of change. <br>
-                Final consumption expenditure households: Final consumption expenditure of households and non-profit institutions serving households, Current prices, million units of national currency")
+                Final consumption expenditure households: Final consumption expenditure of households and non-profit institutions serving households, Current prices, million units of national currency. <br>
+                The unit labour cost (ULC) is defined as the ratio of labour costs to labour productivity. <br>
+                Compensation of employees (at current prices) is defined as the total remuneration, in cash or in kind, payable by an employer to an employee in return for work done by the latter during the accounting period. <br>
+                Labour productivity is expressed in terms of percentage change compared to same period in previous year. ")
                 )
               )
       )
@@ -117,7 +121,8 @@ server <- function(input, output) {
       data <- Quarterly_data[Quarterly_data$geo == input$country_quarterly, ]
 
       # Apply seasonal adjustment if the selected variable requires it
-      if (input$variable_quarterly %in% c("Total aggregated Final consumption", "Gross fixed capital formation", "Government expenditure")) {
+      if (input$variable_quarterly %in% c("Final consumption expenditure households", "Gross fixed capital formation", "Government expenditure","Nominal unit labour cost", 
+                                          "Current account", "Labour productivity")) {
         window_size <- 4  # Adjust based on your data's seasonality (e.g., 4 for quarterly data)
         data[[input$variable_quarterly]] <- rollmean(data[[input$variable_quarterly]], k = window_size, fill = NA, align = "center")
       }

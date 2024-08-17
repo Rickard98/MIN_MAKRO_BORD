@@ -1,5 +1,5 @@
 
-pacman::p_load("stringr", "pbapply","knitr" ,"openxlsx", "dplyr", "tidyr", "eurostat")
+pacman::p_load("stringr", "pbapply","knitr" ,"openxlsx", "dplyr", "tidyr", "eurostat", "httr", "jsonlite")
 
 ############################################################
 # Fetch total unemployment data for select countries
@@ -305,3 +305,11 @@ Nominal_unit_labour_cost <- na.omit(Nominal_unit_labour_cost)
 Nominal_unit_labour_cost <- Nominal_unit_labour_cost %>% rename(Nominal_unit_labour_cost = values)
 
 saveRDS(Nominal_unit_labour_cost, "MakroDashboard/data/quarterly/Nominal_unit_labour_cost.R")
+
+#################################
+################################
+#######OECD data  
+#################################
+#################################
+
+
