@@ -19,10 +19,10 @@ Quarterly_data <- readRDS("data/Quarterly_data_all.R")  # Replace "your_quarterl
 
 # Filter out rows with time values smaller than 2019-01-01
 Monthly_data <- Monthly_data %>%
-  filter(time >= as.Date("2019-01-01"))
+  filter(time >= as.Date("2018-01-01"))
 
 Quarterly_data <- Quarterly_data %>%
-  filter(time >= as.Date("2019-01-01"))
+  filter(time >= as.Date("2018-01-01"))
 
 # Define UI for application
 ui <- dashboardPage(
