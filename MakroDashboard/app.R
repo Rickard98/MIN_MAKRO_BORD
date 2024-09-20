@@ -87,7 +87,7 @@ ui <- dashboardPage(
                 HCPI (inflation): Harmonized Consumer Price Index (all items and annual rate of change). Change in energy and food prices are also HCPI. <br>
                 Unemployment data: Percentage of population in the labour force (seasonally adjusted data). <br>
                 Gross domestic product (GDP): GDP at market prices (seasonally adjusted and chain linked volumes, annualized percentage change on previous period). <br>
-                Change in Housing prices: House price index (2015 = 100), total types of houses, and annual rate of change. <br>
+                Change in Housing prices: House price index (2015 = 100), total types of houses, and Quaterly rate of change. <br>
                 Final consumption expenditure households: Final consumption expenditure of households and non-profit institutions serving households, Current prices, million units of national currency. <br>
                 The unit labour cost (ULC) is defined as the ratio of labour costs to labour productivity. <br>
                 Compensation of employees (at current prices) is defined as the total remuneration, in cash or in kind, payable by an employer to an employee in return for work done by the latter during the accounting period. <br>

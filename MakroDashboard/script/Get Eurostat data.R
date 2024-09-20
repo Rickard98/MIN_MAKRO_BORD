@@ -1,6 +1,7 @@
 
 pacman::p_load("stringr", "pbapply","knitr" ,"openxlsx", "dplyr", "tidyr", "eurostat", "httr", "jsonlite")
 
+library(eurostat)
 ############################################################
 # Fetch total unemployment data for select countries
 ############################################################
@@ -97,7 +98,7 @@ saveRDS(GDP, "MakroDashboard/data/quarterly/GDP.R")
 #####################################################
 
 House_price <- get_eurostat("prc_hpi_q", 
-                            filters = list(geo = c("FI", "SE", "DK", "DE", "FR", "NL", "IT", "ES"), purchase = "TOTAL", unit = "RCH_A"), 
+                            filters = list(geo = c("FI", "SE", "DK", "DE", "FR", "NL", "IT", "ES"), purchase = "TOTAL", unit = "RCH_Q"), 
                             time_format="date")
 House_price <- select(House_price, geo, time, values)
 

@@ -1,6 +1,5 @@
 pacman::p_load("stringr", "pbapply","knitr" ,"openxlsx", "dplyr", "tidyr", "purrr", "zoo")
 
-
 ###Quarterly 
 # Directory containing the Excel files
 directory <- "MakroDashboard/data/quarterly/"
