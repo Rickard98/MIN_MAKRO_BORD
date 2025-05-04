@@ -17,7 +17,7 @@ for (file in R_files) {
 }
 
 
-Quarterly_data <- reduce(data_list, left_join, by = c("geo", "time"))
+Quarterly_data <- reduce(data_list, full_join, by = c("geo", "time")) ## USE left if neede
 
 Quarterly_data <- Quarterly_data %>%
   rename(`Final consumption expenditure households` = Final_consumption) %>%
@@ -122,7 +122,6 @@ Monthly_data_filtered <- Monthly_data %>%
 Quarterly2 <- merge(Quarterly_data, Monthly_data, by = c("geo", "time"), all.x = T)
 Quarterly2 <- select(Quarterly_data, -`Government deficit`)
 
-
 # Let's say Quarterly2 is your starting data
 Quarterly2_wide <- Quarterly2 %>%
   pivot_wider(
@@ -135,6 +134,10 @@ Quarterly2_wide <- Quarterly2 %>%
                     `Nominal unit labour cost`) #`Infaltion CPI`, `Change in energy price`, 
                     #`Change in food price`, `Unemployment data`)
   )
+
+
+
+
 
 write.csv(Quarterly2_wide, "MakroDashboard/data/ML data//Quarterly_wide2.csv")
 

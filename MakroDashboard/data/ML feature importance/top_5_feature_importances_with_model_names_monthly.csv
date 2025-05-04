@@ -1,0 +1,21 @@
+Feature,Importance,Model,Model_Index
+Infaltion CPI_Finland_lag1,0.22469258,Infaltion CPI,0
+Infaltion CPI_Denmark,0.05417115,Infaltion CPI,0
+Change in energy price_Italy,0.050016653,Infaltion CPI,0
+Change in energy price_France,0.045209445,Infaltion CPI,0
+Unemployment data_Netherlands,0.04199471,Infaltion CPI,0
+Change in energy price_Denmark,0.18341842,Change in energy price,1
+Change in energy price_Spain,0.121400155,Change in energy price,1
+Change in energy price_France,0.11074445,Change in energy price,1
+Change in energy price_Finland_lag1,0.04812163,Change in energy price,1
+Unemployment data_Netherlands_lag3,0.03994793,Change in energy price,1
+Change in food price_Finland_lag1,0.15424536,Change in food price,2
+Infaltion CPI_Netherlands_lag2,0.12277358,Change in food price,2
+Change in energy price_Italy_lag8,0.056547917,Change in food price,2
+Infaltion CPI_Finland_lag1,0.051229864,Change in food price,2
+Infaltion CPI_Finland_lag2,0.047412623,Change in food price,2
+Unemployment data_Finland_lag2,0.1683658,Unemployment,3
+Unemployment data_Finland_lag1,0.07974384,Unemployment,3
+Unemployment data_Finland_lag4,0.07787541,Unemployment,3
+Unemployment data_France_lag10,0.07158706,Unemployment,3
+Unemployment data_Finland_lag3,0.066003114,Unemployment,3
