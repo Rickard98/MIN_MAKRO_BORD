@@ -5,7 +5,7 @@ account: rickardsjoberg
 server: shinyapps.io
 hostUrl: https://api.shinyapps.io/v1
 appId: 12433237
-bundleId: 10100093
+bundleId: 10252244
 url: https://rickardsjoberg.shinyapps.io/MakroDashboard/
 version: 1
 asMultiple: FALSE

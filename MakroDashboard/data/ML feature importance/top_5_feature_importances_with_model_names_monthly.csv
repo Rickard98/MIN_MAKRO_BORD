@@ -1,21 +1,21 @@
 Feature,Importance,Model,Model_Index
-Infaltion CPI_Finland_lag1,0.22469258,Infaltion CPI,0
-Infaltion CPI_Denmark,0.05417115,Infaltion CPI,0
-Change in energy price_Italy,0.050016653,Infaltion CPI,0
-Change in energy price_France,0.045209445,Infaltion CPI,0
-Unemployment data_Netherlands,0.04199471,Infaltion CPI,0
-Change in energy price_Denmark,0.18341842,Change in energy price,1
-Change in energy price_Spain,0.121400155,Change in energy price,1
-Change in energy price_France,0.11074445,Change in energy price,1
-Change in energy price_Finland_lag1,0.04812163,Change in energy price,1
-Unemployment data_Netherlands_lag3,0.03994793,Change in energy price,1
-Change in food price_Finland_lag1,0.15424536,Change in food price,2
-Infaltion CPI_Netherlands_lag2,0.12277358,Change in food price,2
-Change in energy price_Italy_lag8,0.056547917,Change in food price,2
-Infaltion CPI_Finland_lag1,0.051229864,Change in food price,2
-Infaltion CPI_Finland_lag2,0.047412623,Change in food price,2
-Unemployment data_Finland_lag2,0.1683658,Unemployment,3
-Unemployment data_Finland_lag1,0.07974384,Unemployment,3
-Unemployment data_Finland_lag4,0.07787541,Unemployment,3
-Unemployment data_France_lag10,0.07158706,Unemployment,3
-Unemployment data_Finland_lag3,0.066003114,Unemployment,3
+Infaltion CPI_Finland_lag1,31.057388730009873,Infaltion CPI,0
+Infaltion CPI_Finland_lag2,10.22089199853866,Infaltion CPI,0
+Infaltion CPI_Denmark_lag1,7.606847101755436,Infaltion CPI,0
+Infaltion CPI_Denmark,3.1117982712545604,Infaltion CPI,0
+Change in energy price_Spain,1.9423845457114874,Infaltion CPI,0
+Change in energy price_Spain,19.267401665520307,Change in energy price,1
+Change in energy price_Denmark,13.205667872010189,Change in energy price,1
+Change in energy price_France,6.136743027583305,Change in energy price,1
+Change in energy price_Finland_lag1,5.864891697040068,Change in energy price,1
+Change in energy price_Denmark_lag1,4.9547219123338575,Change in energy price,1
+Change in food price_Finland_lag1,18.532610365584343,Change in food price,2
+Change in food price_Finland_lag2,6.940268067409276,Change in food price,2
+Infaltion CPI_Finland_lag2,5.066452982471102,Change in food price,2
+Infaltion CPI_Finland_lag1,4.8697935249649404,Change in food price,2
+Infaltion CPI_Spain_lag7,2.844679820697837,Change in food price,2
+Unemployment data_Finland_lag2,12.114951270604193,Unemployment,3
+Unemployment data_Finland_lag5,4.490446274850596,Unemployment,3
+Unemployment data_Sweden_lag7,3.9961310423961045,Unemployment,3
+Unemployment data_Sweden_lag3,2.6135116621952434,Unemployment,3
+Unemployment data_Italy_lag9,2.1825089806426696,Unemployment,3

@@ -30,6 +30,16 @@ PredictionsM$`Unemployment data` <- last_unemp * ((PredictionsM$`Unemployment da
 PredictionsM_final <- subset(data2, geo == "Finland")
 PredictionsM_final <- rbind(PredictionsM_final,PredictionsM)
 
+vars_to_fix <- c("Change in food price", "Unemployment data")
+
+# Apply the fix: move last value to second-last if second-last is NA
+for (var in vars_to_fix) {
+  n <- nrow(PredictionsM_final)
+  if (n >= 2 && is.na(PredictionsM_final[[var]][n - 1]) && !is.na(PredictionsM_final[[var]][n])) {
+    PredictionsM_final[[var]][n - 1] <- PredictionsM_final[[var]][n]
+    PredictionsM_final[[var]][n] <- NA
+  }
+}
 
 return(PredictionsM_final)
 }
@@ -111,9 +121,31 @@ Fix_Quaterly_predictions_df  <- function(data1, data2){
   #################
   
   
-  
   PredictionsQ_finland <- subset(data_Q, geo == "Finland")
   PredictionsQ_final <- rbind(PredictionsQ_finland,PredictionsQ)
+  
+  vars_to_fix2 <- c("Current account",
+                    "Direct investment",
+                    "Employees Compensation",
+                    "Totlat employment",
+                    "Final consumption expenditure households",
+                    "Change in GDP",
+                    "Gross fixed capital formation",
+                    "Government debt to gdp",
+                    "Government expenditure",
+                    "Change in Housing prices",
+                    "Labour productivity",
+                    "Net international investment",
+                    "Nominal unit labour cost")
+  
+  
+  for (var in vars_to_fix2) {
+    n <- nrow(PredictionsQ_final)
+    if (n >= 2 && is.na(PredictionsQ_final[[var]][n - 1]) && !is.na(PredictionsQ_final[[var]][n])) {
+      PredictionsQ_final[[var]][n - 1] <- PredictionsQ_final[[var]][n]
+      PredictionsQ_final[[var]][n] <- NA
+    }
+  }
   
   return(PredictionsQ_final)
   

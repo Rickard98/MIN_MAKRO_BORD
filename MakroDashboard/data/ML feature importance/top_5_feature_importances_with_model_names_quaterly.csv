@@ -1,66 +1,66 @@
 Feature,Importance,Model,Model_Index
-Final consumption expenditure households_Italy_lag10,0.19027598,Current account,0
-Totlat employment_Spain_lag8,0.08475206,Current account,0
-Final consumption expenditure households_Spain_lag10,0.080874816,Current account,0
-Totlat employment_Denmark_lag8,0.07157736,Current account,0
-Totlat employment_France_lag8,0.059424695,Current account,0
-Gross fixed capital formation_Denmark,0.14124598,Direct investment,1
-Final consumption expenditure households_Sweden,0.11177685,Direct investment,1
-Gross fixed capital formation_Germany_lag4,0.0943635,Direct investment,1
-Employees Compensation_Spain_lag5,0.09079372,Direct investment,1
-Net international investment_France_lag6,0.057698656,Direct investment,1
-Totlat employment_Denmark_lag4,0.1864864,Employees Compensation,2
-Government expenditure_France_lag10,0.100878656,Employees Compensation,2
-Government expenditure_Italy_lag5,0.093892,Employees Compensation,2
-Government expenditure_Netherlands_lag7,0.06862954,Employees Compensation,2
-Employees Compensation_Netherlands,0.063467175,Employees Compensation,2
-Government expenditure_Germany,0.3261251,Total employment,3
-Employees Compensation_France_lag2,0.107405715,Total employment,3
-Employees Compensation_Sweden_lag4,0.1051709,Total employment,3
-Current account_France_lag10,0.06921185,Total employment,3
-Employees Compensation_France_lag5,0.05231875,Total employment,3
-Employees Compensation_Spain_lag7,0.2608455,Final consumption expenditure households,4
-Employees Compensation_Germany,0.21501969,Final consumption expenditure households,4
-Final consumption expenditure households_Netherlands_lag10,0.13014613,Final consumption expenditure households,4
-Net international investment_Sweden_lag4,0.094867885,Final consumption expenditure households,4
-Employees Compensation_Spain,0.0727309,Final consumption expenditure households,4
-Direct investment_Spain,0.3426111,Change in GDP,5
-Government debt to gdp_France,0.16095234,Change in GDP,5
-Current account_Italy_lag2,0.124998145,Change in GDP,5
-Totlat employment_Denmark_lag3,0.07680565,Change in GDP,5
-Totlat employment_Spain_lag7,0.06551471,Change in GDP,5
-Employees Compensation_Germany,0.29650596,Gross fixed capital formation,6
-Employees Compensation_Italy,0.13942073,Gross fixed capital formation,6
-Totlat employment_Germany_lag7,0.12330652,Gross fixed capital formation,6
-Government expenditure_Denmark,0.093895234,Gross fixed capital formation,6
-Current account_France_lag1,0.068286285,Gross fixed capital formation,6
-Employees Compensation_Sweden_lag4,0.14517494,Government debt to GDP,7
-Employees Compensation_Sweden,0.09162947,Government debt to GDP,7
-Change in Housing prices_Germany_lag4,0.08344136,Government debt to GDP,7
-Totlat employment_Germany_lag5,0.08086168,Government debt to GDP,7
-Change in GDP_Netherlands_lag2,0.079297125,Government debt to GDP,7
-Employees Compensation_Denmark,0.4711862,Government expenditure,8
-Employees Compensation_Italy_lag10,0.1887964,Government expenditure,8
-Employees Compensation_Denmark_lag4,0.0632835,Government expenditure,8
-Government expenditure_Spain_lag6,0.031426426,Government expenditure,8
-Government expenditure_France,0.023985177,Government expenditure,8
-Final consumption expenditure households_France_lag5,0.24751626,Change in Housing prices,9
-Totlat employment_France_lag10,0.113857836,Change in Housing prices,9
-Final consumption expenditure households_France_lag4,0.093528114,Change in Housing prices,9
-Final consumption expenditure households_France_lag9,0.08562325,Change in Housing prices,9
-Final consumption expenditure households_Italy,0.06859623,Change in Housing prices,9
-Nominal unit labour cost_Denmark_lag6,0.15295754,Labour productivity,10
-Labour productivity_Germany_lag4,0.13556592,Labour productivity,10
-Nominal unit labour cost_France_lag5,0.1010388,Labour productivity,10
-Labour productivity_Sweden_lag6,0.08933432,Labour productivity,10
-Nominal unit labour cost_Italy,0.085109934,Labour productivity,10
-Labour productivity_Spain,0.41002136,Net international investment,11
-Change in Housing prices_Sweden,0.098050445,Net international investment,11
-Change in GDP_France_lag5,0.09429464,Net international investment,11
-Direct investment_Germany_lag3,0.053349487,Net international investment,11
-Direct investment_Denmark_lag3,0.04371737,Net international investment,11
-Nominal unit labour cost_Netherlands_lag7,0.1761551,Nominal unit labour cost,12
-Labour productivity_Netherlands_lag3,0.1422423,Nominal unit labour cost,12
-Change in GDP_Spain_lag6,0.124716476,Nominal unit labour cost,12
-Net international investment_France_lag2,0.114087455,Nominal unit labour cost,12
-Net international investment_Finland_lag10,0.09140511,Nominal unit labour cost,12
+Final consumption expenditure households_Italy_lag2,0.14283073,Current account,0
+Totlat employment_Spain,0.12071625,Current account,0
+Net international investment_Spain_lag3,0.08644189,Current account,0
+Gross fixed capital formation_Netherlands_lag3,0.0828243,Current account,0
+Labour productivity_Netherlands_lag1,0.049119692,Current account,0
+Gross fixed capital formation_Denmark,0.14232454,Direct investment,1
+Government expenditure_Netherlands_lag10,0.0910419,Direct investment,1
+Direct investment_France_lag3,0.07920315,Direct investment,1
+Nominal unit labour cost_Sweden_lag6,0.07280165,Direct investment,1
+Direct investment_Denmark_lag1,0.06673652,Direct investment,1
+Government expenditure_Germany,0.21957088,Employees Compensation,2
+Employees Compensation_France_lag1,0.10935098,Employees Compensation,2
+Government expenditure_Denmark_lag1,0.10276929,Employees Compensation,2
+Employees Compensation_Netherlands,0.08149232,Employees Compensation,2
+Final consumption expenditure households_France_lag5,0.08135365,Employees Compensation,2
+Government expenditure_Germany,0.5472251,Total employment,3
+Employees Compensation_Sweden,0.12398389,Total employment,3
+Gross fixed capital formation_Germany,0.070592105,Total employment,3
+Employees Compensation_Germany,0.039591335,Total employment,3
+Totlat employment_Spain_lag7,0.025999254,Total employment,3
+Employees Compensation_Germany,0.248381,Final consumption expenditure households,4
+Employees Compensation_Denmark,0.11818923,Final consumption expenditure households,4
+Net international investment_Sweden_lag4,0.07962963,Final consumption expenditure households,4
+Current account_Sweden_lag2,0.0680845,Final consumption expenditure households,4
+Employees Compensation_Spain,0.06637589,Final consumption expenditure households,4
+Direct investment_Spain,0.15941073,Change in GDP,5
+Direct investment_Denmark_lag4,0.10851274,Change in GDP,5
+Change in Housing prices_Finland_lag3,0.09870543,Change in GDP,5
+Government debt to gdp_France_lag9,0.089242965,Change in GDP,5
+Current account_Italy_lag2,0.07224292,Change in GDP,5
+Employees Compensation_Germany,0.36663467,Gross fixed capital formation,6
+Employees Compensation_Italy,0.14358671,Gross fixed capital formation,6
+Government expenditure_Germany_lag5,0.083739094,Gross fixed capital formation,6
+Employees Compensation_Netherlands_lag2,0.07589012,Gross fixed capital formation,6
+Totlat employment_Spain_lag2,0.06428563,Gross fixed capital formation,6
+Employees Compensation_Sweden,0.09360179,Government debt to GDP,7
+Labour productivity_France,0.0821661,Government debt to GDP,7
+Nominal unit labour cost_Finland_lag4,0.07665195,Government debt to GDP,7
+Change in GDP_Sweden_lag3,0.05347732,Government debt to GDP,7
+Change in Housing prices_Germany,0.04553963,Government debt to GDP,7
+Employees Compensation_Denmark,0.5171265,Government expenditure,8
+Employees Compensation_France_lag1,0.09063328,Government expenditure,8
+Government expenditure_France,0.056891818,Government expenditure,8
+Gross fixed capital formation_Netherlands_lag1,0.049329046,Government expenditure,8
+Employees Compensation_Denmark_lag1,0.038421635,Government expenditure,8
+Final consumption expenditure households_France_lag5,0.20463432,Change in Housing prices,9
+Change in Housing prices_France_lag2,0.12275633,Change in Housing prices,9
+Totlat employment_Sweden_lag4,0.077181324,Change in Housing prices,9
+Totlat employment_Denmark,0.07088973,Change in Housing prices,9
+Final consumption expenditure households_Spain_lag4,0.05579879,Change in Housing prices,9
+Labour productivity_Netherlands,0.219935,Labour productivity,10
+Net international investment_Sweden_lag3,0.11102738,Labour productivity,10
+Labour productivity_Finland_lag1,0.10912996,Labour productivity,10
+Net international investment_Spain,0.09719648,Labour productivity,10
+Change in GDP_Germany_lag3,0.072780184,Labour productivity,10
+Net international investment_France,0.34824032,Net international investment,11
+Net international investment_Germany,0.08441585,Net international investment,11
+Labour productivity_Spain,0.07343528,Net international investment,11
+Change in GDP_Spain_lag1,0.04226149,Net international investment,11
+Labour productivity_Spain_lag1,0.0414899,Net international investment,11
+Net international investment_Italy_lag10,0.108237945,Nominal unit labour cost,12
+Net international investment_Germany_lag10,0.099442996,Nominal unit labour cost,12
+Change in Housing prices_Italy_lag10,0.09558185,Nominal unit labour cost,12
+Government debt to gdp_Spain_lag3,0.07402376,Nominal unit labour cost,12
+Nominal unit labour cost_Germany_lag3,0.06747575,Nominal unit labour cost,12

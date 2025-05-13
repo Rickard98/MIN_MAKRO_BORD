@@ -308,6 +308,7 @@ server <- function(input, output, session) {
   ##############
   
   # Dynamic plot for prediction data
+  # Dynamic plot for prediction data
   output$prediction_plot <- renderPlot({
     if (input$prediction_data == "Monthly predictions") {
       vars <- input$variable_predictionsM
@@ -317,10 +318,11 @@ server <- function(input, output, session) {
         return(NULL)
       }
       
-      # Identify the last observation per group
+      # Identify last non-NA value per geo group
       last_obs <- data %>%
         group_by(geo) %>%
-        filter(time == max(time)) %>%
+        filter(!is.na(get(vars[1]))) %>%
+        slice_max(order_by = time, n = 1) %>%
         ungroup()
       
       ggplot(data, aes(x = time)) +
@@ -348,10 +350,11 @@ server <- function(input, output, session) {
         return(NULL)
       }
       
-      # Identify the last observation per group
+      # Identify last non-NA value per geo group
       last_obs <- data %>%
         group_by(geo) %>%
-        filter(time == max(time)) %>%
+        filter(!is.na(get(vars[1]))) %>%
+        slice_max(order_by = time, n = 1) %>%
         ungroup()
       
       ggplot(data, aes(x = time)) +
@@ -372,7 +375,6 @@ server <- function(input, output, session) {
         )
     }
   })
-  
   ##############
   # Feature imporance
   ##############
@@ -408,10 +410,9 @@ server <- function(input, output, session) {
       theme_minimal()+
       theme(
         legend.position = "bottom",
-        axis.title.x = element_text(size = 16), 
-        axis.title.y = element_text(size = 16),  
-        axis.text.x = element_text(size = 14),   
-        axis.text.y = element_text(size = 14)
+        axis.title.x = element_text(size = 17), 
+        axis.title.y = element_text(size = 17),  
+        axis.text.x = element_text(size = 16),   
       )
     
   })
