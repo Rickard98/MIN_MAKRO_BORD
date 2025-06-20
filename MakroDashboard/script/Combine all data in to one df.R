@@ -97,9 +97,24 @@ Monthly_data <- Monthly_data %>%
 
 saveRDS(Monthly_data, "MakroDashboard/data/Monthly_data_all.R")
 
+
+
+
+
+
+
+
+
+
+
+
+
+###################
 ###########################################################################
 ### Make the LM data
 ###########################################################################
+###################
+
 
 Monthly_data <- readRDS("MakroDashboard/data/Monthly_data_all.R")
 Quarterly_data <- readRDS("MakroDashboard/data/Quarterly_data_all.R")

@@ -97,8 +97,8 @@ saveRDS(GDP, "MakroDashboard/data/quarterly/GDP.R")
 # Fetch House price data for select countries
 #####################################################
 
-House_price <- get_eurostat("prc_hpi_q", 
-                            filters = list(geo = c("FI", "SE", "DK", "DE", "FR", "NL", "IT", "ES"), purchase = "TOTAL", unit = "RCH_Q"), 
+House_price <- get_eurostat("prc_hpi_q", ## Q change prc_hpi_q
+                            filters = list(geo = c("FI", "SE", "DK", "DE", "FR", "NL", "IT", "ES"), purchase = "TOTAL", unit = "I15_Q"), 
                             time_format="date")
 House_price <- select(House_price, geo, time, values)
 
